@@ -94,6 +94,10 @@
 		line-height: 1.25rem; /* 1.25 vezes o tamanho de fonte base (20px com base em 16px) */
 	}
 
+	em {
+		@apply not-italic text-primary;
+	}
+
 	.on-focus {
 		@apply focus:outline-primary focus:outline-1 focus:outline focus:bg-neutral-800;
 	}
@@ -101,5 +105,9 @@
 	#inicio {
 		background-image: url('../assets/img/INICIO_BG.webp');
 		@apply bg-no-repeat bg-cover bg-center;
+	}
+
+	*::selection {
+		@apply bg-primary text-white;
 	}
 }

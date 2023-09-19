@@ -31,7 +31,7 @@ export function MainNavigation() {
 					</li>
 					<li className="rounded-full hover:bg-neutral-800 flex">
 						<Link
-							href="https://www.linkedin.com/in/art2354/"
+							href="https://github.com/Arthur-Gab"
 							aria-label="Visite o meu perfil no Github"
 							target="_blank"
 							className="rounded-full p-2 on-focus"
