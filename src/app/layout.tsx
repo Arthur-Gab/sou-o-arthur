@@ -3,6 +3,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 
 import { poppins } from '@/styles/fonts';
+import { MainNavigation } from '@/components/MainNav';
 
 export const metadata: Metadata = {
 	title: 'Eu sou o Arthur',
@@ -17,7 +18,10 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={poppins.className}>{children}</body>
+			<body className={poppins.className}>
+				<MainNavigation />
+				{children}
+			</body>
 		</html>
 	);
 }

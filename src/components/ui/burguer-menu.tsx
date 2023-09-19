@@ -13,6 +13,16 @@ import {
 
 import { Menu, X } from 'lucide-react';
 
+function scrollTo(target: string) {
+	const element = document.querySelector(target);
+	if (element) {
+		const yOffset = -74; // Ajuste o valor conforme necessário para acomodar a altura do seu cabeçalho
+		const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+
+		window.scrollTo({ top: y, behavior: 'smooth' });
+	}
+}
+
 export function BurguerMenu() {
 	const [isOpen, setIsOpen] = useState(false);
 	const menuRef = useRef<HTMLButtonElement | null>(null);
@@ -58,13 +68,20 @@ export function BurguerMenu() {
 					)}
 				</Trigger>
 				<Portal>
-					<Content className="w-screen flex flex-col items-center translate-y-6 px-2">
+					<Content
+						className="bg-neutral-950 w-screen flex flex-col items-center px-2 animate-fade-down"
+						sideOffset={18}
+					>
 						<Item
 							asChild
 							className="rounded w-full text-center py-2 hover:bg-zinc-800 focus:outline-none focus:bg-zinc-800"
 						>
 							<Link
 								href={'#inicio'}
+								onClick={(e) => {
+									e.preventDefault();
+									scrollTo('#inicio');
+								}}
 								aria-description="Navegue até a seção em que eu me introduzo"
 							>
 								Inicio
@@ -76,7 +93,15 @@ export function BurguerMenu() {
 							aria-description="Navegue até a seção em que eu falo sobre mim"
 							className="rounded w-full text-center py-2 hover:bg-zinc-800 focus:outline-none  focus:bg-zinc-800"
 						>
-							<Link href={'#about-me'}>Sobre mim </Link>
+							<Link
+								href={'#about-me'}
+								onClick={(e) => {
+									e.preventDefault();
+									scrollTo('#about-me');
+								}}
+							>
+								Sobre mim
+							</Link>
 						</Item>
 						<Separator className="bg-zinc-700 h-[1px] w-full" />
 						<Item
@@ -84,7 +109,15 @@ export function BurguerMenu() {
 							aria-description="Navegue até a seção em que abordo minhas habilidades"
 							className="rounded w-full text-center py-2 hover:bg-zinc-800 focus:outline-none  focus:bg-zinc-800"
 						>
-							<Link href={'#skills'}>O que eu faço</Link>
+							<Link
+								href={'#skills'}
+								onClick={(e) => {
+									e.preventDefault();
+									scrollTo('#skills');
+								}}
+							>
+								O que eu faço
+							</Link>
 						</Item>
 						<Separator className="bg-zinc-700 h-[1px] w-full" />
 						<Item
@@ -94,6 +127,10 @@ export function BurguerMenu() {
 							<Link
 								href={'#projects'}
 								aria-description="Navegue até a seção em que eu coloco meus projetos em exibição"
+								onClick={(e) => {
+									e.preventDefault();
+									scrollTo('#projects');
+								}}
 							>
 								Projetos
 							</Link>
@@ -106,6 +143,10 @@ export function BurguerMenu() {
 							<Link
 								href={'#contact'}
 								aria-description="Navegue até a seção de contatos para entrar em contato comigo"
+								onClick={(e) => {
+									e.preventDefault();
+									scrollTo('#contact');
+								}}
 							>
 								Contato
 							</Link>

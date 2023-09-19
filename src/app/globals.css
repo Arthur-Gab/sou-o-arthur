@@ -97,4 +97,9 @@
 	.on-focus {
 		@apply focus:outline-primary focus:outline-1 focus:outline focus:bg-neutral-800;
 	}
+
+	#inicio {
+		background-image: url('../assets/img/INICIO_BG.webp');
+		@apply bg-no-repeat bg-cover bg-center;
+	}
 }
