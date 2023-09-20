@@ -13,15 +13,7 @@ import {
 
 import { Menu, X } from 'lucide-react';
 
-function scrollTo(target: string) {
-	const element = document.querySelector(target);
-	if (element) {
-		const yOffset = -74; // Ajuste o valor conforme necessário para acomodar a altura do seu cabeçalho
-		const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
-
-		window.scrollTo({ top: y, behavior: 'smooth' });
-	}
-}
+import { scrollSmooth } from '@/util/scrollSmooth';
 
 export function BurguerMenu() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -80,7 +72,7 @@ export function BurguerMenu() {
 								href={'#inicio'}
 								onClick={(e) => {
 									e.preventDefault();
-									scrollTo('#inicio');
+									scrollSmooth('#inicio');
 								}}
 								aria-description="Navegue até a seção em que eu me introduzo"
 							>
@@ -97,7 +89,7 @@ export function BurguerMenu() {
 								href={'#about-me'}
 								onClick={(e) => {
 									e.preventDefault();
-									scrollTo('#about-me');
+									scrollSmooth('#about-me');
 								}}
 							>
 								Sobre mim
@@ -113,7 +105,7 @@ export function BurguerMenu() {
 								href={'#skills'}
 								onClick={(e) => {
 									e.preventDefault();
-									scrollTo('#skills');
+									scrollSmooth('#skills');
 								}}
 							>
 								O que eu faço
@@ -129,7 +121,7 @@ export function BurguerMenu() {
 								aria-description="Navegue até a seção em que eu coloco meus projetos em exibição"
 								onClick={(e) => {
 									e.preventDefault();
-									scrollTo('#projects');
+									scrollSmooth('#projects');
 								}}
 							>
 								Projetos
@@ -145,7 +137,7 @@ export function BurguerMenu() {
 								aria-description="Navegue até a seção de contatos para entrar em contato comigo"
 								onClick={(e) => {
 									e.preventDefault();
-									scrollTo('#contact');
+									scrollSmooth('#contact');
 								}}
 							>
 								Contato

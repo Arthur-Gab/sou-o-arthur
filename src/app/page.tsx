@@ -20,7 +20,7 @@ export default function Home() {
 						Baixar CV
 					</button>
 					<Link
-						href={'https://wa.me/+5531995409388'}
+						href="https://wa.me/+5531995409388/}"
 						target="_blank"
 						className="bg-black px-6 py-4 rounded-full text-primary border-primary on-focus flex gap-2 hover:bg-neutral-800"
 						aria-description="Inicie uma conversa comigo pelo whatssap"
