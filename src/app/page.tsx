@@ -6,24 +6,31 @@ import { Phone } from 'lucide-react';
 export default function Home() {
 	return (
 		<>
+			{/* introduction */}
 			<section
 				id="inicio"
-				className="flex gap-4 justify-center items-center flex-col bg-fixed w-full h-screen"
+				className="flex flex-col gap-6 justify-center items-center bg-fixed h-screen"
 			>
+				{/* Apresentantio */}
 				<div>
-					<p className="text-xl text-primary-foreground">Olá, eu sou o</p>
-					<h1 className="text-primary">Arthur Gabriel</h1>
-					<em className=" text-neutral-300">Desenvolvedor Front-End</em>
+					<h1 className="text-primary mb-2">
+						<span className="text-xl text-primary-foreground block">
+							Olá, eu sou o
+						</span>
+						Arthur Gabriel
+					</h1>
+					<em className="text-primary-foreground">Desenvolvedor Front-End</em>
 				</div>
+				{/* Buttons */}
 				<div className="flex gap-4">
 					<button className="bg-black px-6 py-4 rounded-full text-primary border-primary on-focus hover:bg-neutral-800">
 						Baixar CV
 					</button>
 					<Link
-						href="https://wa.me/+5531995409388/}"
+						href="https://wa.me/+5531995409388/"
 						target="_blank"
 						className="bg-black px-6 py-4 rounded-full text-primary border-primary on-focus flex gap-2 hover:bg-neutral-800"
-						aria-description="Inicie uma conversa comigo pelo whatssap"
+						aria-description="Inicie uma conversa comigo pelo aplicativo Whatsapp"
 					>
 						<Phone
 							aria-hidden="true"
@@ -33,14 +40,19 @@ export default function Home() {
 					</Link>
 				</div>
 			</section>
+
+			{/* about-me */}
 			<section
 				id="about-me"
-				className="flex justify-center gap-12 items-center flex-col bg-fixed w-full h-screen container mx-auto p-4"
+				className="flex flex-col justify-center gap-12 items-center h-screen p-4"
 			>
 				<div className="relative">
-					<p className="absolute opacity-5 max-sm:text-6xl sm:text-8xl text-center left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 block w-screen">
+					<span
+						aria-hidden="true"
+						className="absolute opacity-5 max-sm:text-6xl sm:text-8xl text-center left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 block w-screen"
+					>
 						SOBRE MIM
-					</p>
+					</span>
 					<h1 className="text-center relative before:border-b-2 before:border-b-primary before:w-6/12 before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2">
 						Um pouco sobre mim
 					</h1>
@@ -56,8 +68,9 @@ export default function Home() {
 						<em>Next.js</em>
 					</p>
 					<p>
-						Mas meus planos é me tornar um <em>Back-End</em> e conseguir desenvolver
-						aplicações completas, utilizando dos padrões{' '}
+						Mas meus planos é me tornar capaz de também desenvolver o{' '}
+						<em>Back-end</em> e conseguir desenvolver aplicações completas, utilizando
+						dos padrões{' '}
 						<em>
 							<abbr title="Arquitetura Model View Control">MVC</abbr>
 						</em>{' '}

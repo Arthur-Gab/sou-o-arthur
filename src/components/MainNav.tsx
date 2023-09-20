@@ -4,7 +4,7 @@ import { BurguerMenu } from './ui/burguer-menu';
 
 export function MainNavigation() {
 	return (
-		<header className="p-4 bg-neutral-900 border-b-primary border-b-2 flex-none fixed w-screen">
+		<header className="p-4 bg-neutral-900 border-b-primary border-b-2 flex-none fixed w-full">
 			<nav className="flex justify-between items-center">
 				{/* Logo */}
 				<Link
