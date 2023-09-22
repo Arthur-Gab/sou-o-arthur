@@ -11,7 +11,7 @@ import {
 	Separator,
 } from '@radix-ui/react-dropdown-menu';
 
-import { Menu, X } from 'lucide-react';
+import { LuMenu as Menu, LuX as X } from 'react-icons/lu';
 
 import { scrollSmooth } from '@/util/scrollSmooth';
 
@@ -22,6 +22,7 @@ export function BurguerMenu() {
 	function burguerShortCurt(event: KeyboardEvent) {
 		if (event.altKey && event.key === '0') {
 			menuRef.current?.focus();
+			console.log(menuRef.current);
 		}
 	}
 
@@ -47,12 +48,14 @@ export function BurguerMenu() {
 				>
 					{isOpen ? (
 						<X
+							size={24}
 							focusable="false"
 							aria-hidden="true"
 							className="text-primary"
 						/>
 					) : (
 						<Menu
+							size={24}
 							focusable="false"
 							aria-hidden="true"
 							className="text-primary"
@@ -108,7 +111,7 @@ export function BurguerMenu() {
 									scrollSmooth('#skills');
 								}}
 							>
-								O que eu faço
+								Habilidades
 							</Link>
 						</Item>
 						<Separator className="bg-zinc-700 h-[1px] w-full" />

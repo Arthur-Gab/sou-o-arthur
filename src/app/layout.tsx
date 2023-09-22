@@ -6,7 +6,7 @@ import { poppins } from '@/styles/fonts';
 import { MainNavigation } from '@/components/MainNav';
 
 export const metadata: Metadata = {
-	title: 'Eu sou o Arthur',
+	title: 'Arthur Gabriel - Front-End Portifolio',
 	description:
 		'Bem-vindo ao meu cantinho virtual! Este é o lugar onde compartilho minha jornada criativa e profissional. Navegue pelo meu portfólio para explorar meu trabalho anterior e projetos atuais',
 };

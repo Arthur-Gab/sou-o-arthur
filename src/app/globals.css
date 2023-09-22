@@ -59,6 +59,10 @@
 		@apply h-6 w-6;
 	}
 
+	.icon-8 {
+		@apply h-8 w-8;
+	}
+
 	html {
 		font-size: 16px;
 		line-height: 1.5rem;

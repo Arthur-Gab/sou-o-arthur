@@ -1,10 +1,11 @@
-import { Github, Linkedin } from 'lucide-react';
+// import { Github, Linkedin } from 'lucide-react';
+import { LuLinkedin as Linkedin, LuGithub as Github } from 'react-icons/lu';
 import Link from 'next/link';
 import { BurguerMenu } from './ui/burguer-menu';
 
 export function MainNavigation() {
 	return (
-		<header className="p-4 bg-neutral-900 border-b-primary border-b-2 flex-none fixed w-full">
+		<header className="p-4 bg-neutral-900 border-b-primary border-b-2 flex-none fixed w-full z-10">
 			<nav className="flex justify-between items-center">
 				{/* Logo */}
 				<Link
@@ -24,6 +25,7 @@ export function MainNavigation() {
 							className="rounded-full p-2 on-focus"
 						>
 							<Linkedin
+								size={24}
 								focusable="false"
 								aria-hidden="true"
 							/>
@@ -37,6 +39,7 @@ export function MainNavigation() {
 							className="rounded-full p-2 on-focus"
 						>
 							<Github
+								size={24}
 								focusable="false"
 								aria-hidden="true"
 							/>
